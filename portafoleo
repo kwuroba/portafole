@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matias Ortiz | Desarrollo Web</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Encabezado / Hero -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Matias Ortiz</h1>
+            <p class="subtitle">Desarrollo Web & Diseño Limpio para Negocios</p>
+            <p class="tagline">Creo sitios web rápidos, modernos y perfectamente adaptados a cualquier dispositivo.</p>
+            <a href="https://wa.me/TU_NUMERO_AQUI" class="btn-primary" target="_blank">Trabajemos Juntos</a>
+        </div>
+    </header>
+
+    <!-- Sección de Servicios -->
+    <section class="services">
+        <h2>Lo Que Hago Por Tu Negocio</h2>
+        <div class="grid-services">
+            <div class="card">
+                <h3>📱 Diseño Responsivo</h3>
+                <p>Tu página se verá impecable y cargará rápido en cualquier teléfono móvil, tablet o computadora.</p>
+            </div>
+            <div class="card">
+                <h3>🎨 Identidad Visual</h3>
+                <p>Mantengo la misma temática, colores y esencia de tu marca o perfil de Instagram en la web.</p>
+            </div>
+            <div class="card">
+                <h3>⚡ Optimización</h3>
+                <p>Estructuras limpias con botones directos a tu WhatsApp para que no pierdas ninguna venta.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Proyectos (Demos) -->
+    <section class="projects">
+        <h2>Proyectos en Desarrollo</h2>
+        <div class="grid-projects">
+            <div class="project-card">
+                <div class="project-img-placeholder">Demo Enfoque Comercial</div>
+                <h3>Plantilla Premium para Emprendimientos</h3>
+                <p>Un diseño optimizado para mostrar productos y servicios de forma clara y ordenada.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Matias Ortiz. Desarrollado con código limpio.</p>
+    </footer>
+
+</body>
+</html>
