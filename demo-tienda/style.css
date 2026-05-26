@@ -1,14 +1,13 @@
-/* Reset General */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     scroll-behavior: smooth;
 }
 
 body {
-    background-color: #050505;
+    background-color: #0a0a0a;
     color: #ffffff;
 }
 
@@ -17,75 +16,126 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 5%;
-    border-bottom: 1px solid #111;
+    padding: 25px 5%;
+    border-bottom: 1px solid #151515;
+    background-color: rgba(10, 10, 10, 0.9);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: 900;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
 }
 
-.nav-btn {
-    color: #fff;
+.nav-links a {
+    color: #888;
     text-decoration: none;
+    margin-left: 20px;
     font-size: 0.9rem;
-    border: 1px solid #fff;
-    padding: 8px 16px;
-    border-radius: 4px;
+    transition: color 0.3s;
 }
 
-/* Hero Section */
+.nav-links a:hover {
+    color: #fff;
+}
+
+.nav-links .nav-btn {
+    border: 1px solid #fff;
+    padding: 8px 18px;
+    border-radius: 2px;
+    color: #fff;
+}
+
+/* Hero */
 .shop-hero {
-    height: 70vh;
+    height: 75vh;
     display: flex;
     align-items: center;
     padding: 0 5%;
-    background: linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.4));
+    position: relative;
+    background-image: url('https://images.unsplash.com/photo-1509281373149-e957c6296406?q=80&w=1200&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #0a0a0a 40%, rgba(10,10,10,0.2));
+    z-index: 1;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
 }
 
 .badge {
-    background-color: #ff0055;
-    padding: 4px 10px;
-    font-size: 0.75rem;
-    font-weight: bold;
-    letter-spacing: 1px;
-    border-radius: 3px;
+    background-color: #fff;
+    color: #000;
+    padding: 5px 10px;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 2px;
 }
 
 .hero-text h1 {
-    font-size: 3.5rem;
+    font-size: 4rem;
     font-weight: 900;
-    line-height: 1.1;
-    margin: 15px 0;
+    line-height: 1;
+    margin: 20px 0;
+    letter-spacing: -1px;
 }
 
 .hero-text p {
     color: #aaa;
-    max-width: 500px;
-    margin-bottom: 30px;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 35px;
 }
 
 .btn-shop {
     display: inline-block;
-    color: #fff;
+    background-color: #fff;
+    color: #000;
     text-decoration: none;
     font-weight: bold;
-    border-bottom: 2px solid #fff;
-    padding-bottom: 5px;
-}
-
-/* Productos */
-.products-section {
-    padding: 60px 5%;
-}
-
-.products-section h2 {
-    font-size: 2rem;
-    margin-bottom: 40px;
-    text-transform: uppercase;
+    padding: 15px 35px;
+    font-size: 0.9rem;
     letter-spacing: 1px;
+    transition: background-color 0.3s;
+}
+
+.btn-shop:hover {
+    background-color: #ccc;
+}
+
+/* Sección Productos */
+.products-section {
+    padding: 80px 5%;
+}
+
+.section-header {
+    margin-bottom: 50px;
+}
+
+.section-header h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.section-header p {
+    color: #666;
+    font-size: 0.95rem;
+    margin-top: 5px;
 }
 
 .products-grid {
@@ -95,80 +145,120 @@ body {
 }
 
 .product-card {
-    background-color: #0c0c0c;
+    background-color: #111111;
     border: 1px solid #1a1a1a;
-    border-radius: 8px;
-    overflow: hidden;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    border-color: #333;
 }
 
 .img-box {
-    height: 300px;
+    height: 380px;
+    overflow: hidden;
     background-color: #151515;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #444;
-    font-weight: bold;
+}
+
+.img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.product-card:hover .img-box img {
+    transform: scale(1.05);
 }
 
 .product-info {
-    padding: 20px;
+    padding: 25px;
+}
+
+.category {
+    font-size: 0.75rem;
+    color: #666;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
 .product-info h3 {
     font-size: 1.1rem;
-    margin-bottom: 10px;
+    margin: 8px 0 12px 0;
+    font-weight: 600;
 }
 
 .price {
-    color: #ff0055;
-    font-weight: bold;
-    margin-bottom: 15px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
 }
 
 .btn-buy {
     display: block;
     text-align: center;
-    background-color: #fff;
-    color: #000;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #333;
     text-decoration: none;
-    padding: 10px;
-    font-weight: bold;
-    border-radius: 4px;
+    padding: 12px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: background-color 0.3s, border-color 0.3s;
 }
 
-/* CTA Contacto */
+.btn-buy:hover {
+    background-color: #fff;
+    color: #000;
+    border-color: #fff;
+}
+
+/* CTA */
 .cta-section {
     background-color: #0c0c0c;
-    padding: 80px 5%;
+    padding: 100px 5%;
     text-align: center;
-    border-top: 1px solid #1a1a1a;
+    border-top: 1px solid #151515;
+}
+
+.cta-section h2 {
+    font-size: 2rem;
+    max-width: 600px;
+    margin: 0 auto 15px auto;
 }
 
 .cta-section p {
-    color: #aaa;
-    margin: 15px 0 30px 0;
+    color: #666;
+    margin-bottom: 35px;
 }
 
 .btn-whatsapp-main {
     display: inline-block;
-    background-color: #25d366; /* Color WhatsApp oficial */
+    background-color: #25d366;
     color: #fff;
     text-decoration: none;
-    padding: 15px 30px;
+    padding: 16px 35px;
     font-weight: bold;
-    border-radius: 30px;
+    border-radius: 50px;
+    font-size: 0.95rem;
+    transition: transform 0.2s;
+}
+
+.btn-whatsapp-main:hover {
+    transform: scale(1.03);
 }
 
 footer {
     text-align: center;
-    padding: 30px;
-    color: #444;
+    padding: 40px;
+    color: #333;
     font-size: 0.8rem;
     border-top: 1px solid #111;
 }
 
-/* Responsivo para móviles */
 @media (max-width: 768px) {
-    .hero-text h1 { font-size: 2.5rem; }
+    .hero-text h1 { font-size: 2.8rem; }
+    .img-box { height: 320px; }
 }
